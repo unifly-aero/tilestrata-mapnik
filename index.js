@@ -69,9 +69,18 @@ module.exports = function(options) {
 		});
 	}
 
+    /**
+	 * Flushes any active caches
+     * @param callback
+     */
+	function flush(callback) {
+		source.flush(callback);
+	}
+
 	return {
 		name: 'mapnik',
 		init: initialize,
-		serve: options.interactivity ? serveGrid : serveImage
+		serve: options.interactivity ? serveGrid : serveImage,
+		flush: flush
 	};
 };
