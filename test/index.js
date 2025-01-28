@@ -5,7 +5,7 @@ if (process.env.MAPNIK_FORK) {
 }
 
 var tilestrata = require('tilestrata');
-var nodeMapnik = require('mapnik');
+var nodeMapnik = require('@mapnik/mapnik');
 var TileServer = tilestrata.TileServer;
 var TileRequest = tilestrata.TileRequest;
 var imageSize = require('image-size');
